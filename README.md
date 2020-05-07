@@ -8,7 +8,7 @@ Those pets will be enhanced if possible in iterations and the usage of pygame.
 # Main Functions
 
 ## ToDo
-[ ] Write concept
+* [ ] Write concept
 
 ## Implemented
 
