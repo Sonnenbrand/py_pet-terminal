@@ -1,6 +1,7 @@
 # coding=UTF-8
 # Small programm that is just interactiong with minimum of functions with help of
 # https://www.youtube.com/watch?v=TburgnvAPLE
+# todo das olle .idea aus Github entfernen
 
 import random
 
