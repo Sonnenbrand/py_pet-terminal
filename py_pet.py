@@ -1,13 +1,19 @@
-# Small programm that is just interactiong with minimum of functions
+# coding=UTF-8
+# Small programm that is just interactiong with minimum of functions with help of
+# https://www.youtube.com/watch?v=TburgnvAPLE
+
+import random
 
 name = "knuddeliger kleiner Plüschball"
 bild = "..::oöo::.."
 gewicht = 1
 alter = 1
 hunger = True
+beenden = False
+spreuche = ("SchnurrSchnurrSchnurr", "PrrrrrBrrrrPrrrr", "Ich will ein Tamagotchi sein")
+
 
 # Funktion um den Status des py_pets zu sehen
-# todo Wie ruft der User die Stats auf?
 
 
 def start_pet():
@@ -23,20 +29,26 @@ def stats():
         print("Und ich bin schön satt!")
 
 
-def fuettern():
-    print("nix")
-
-
 start_pet()
-stats()
 
-beenden = False
 
 while not beenden:
     print("###################################")
     user_input = input('>')
     if user_input == "Ende":
         beenden = True
+    elif user_input == "Status":
+        stats()
+    elif user_input == "Füttern":
+        gewicht = gewicht + 1
+        hunger = False
+        print("NomNomNom! Das war lecker!")
+        print("Ich wiege jetzt " + str(gewicht))
+    elif user_input == "Hallo":
+        print(random.choice(spreuche))
+    else:
+        # Hier immer alle möglichen User Inputs ergänzen
+        print("Wie bitte? Du kannst nur Status, Füttern, Hallo oder Ende nutzen!")
 
 
 print("Bis zum nächsten Mal!")
