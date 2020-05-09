@@ -6,12 +6,6 @@ After I found my 30 something year old Tamagotchi this sparked the idea to creat
 Those pets will be enhanced if possible in iterations and the usage of pygame.
 
 # Main Functions
-
+Pet will start. You can ask for stats, feed it, chat with it and end it.
 ## ToDo
-* [ ] Write concept
-
-## Implemented
-
-## Tested
-
-## Documented
+so much!
