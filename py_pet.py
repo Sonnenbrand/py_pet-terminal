@@ -1,5 +1,5 @@
 # coding=UTF-8
-# Small programm that is just interactiong with minimum of functions with help of
+# Small program that is just interacting with minimum of functions with help of
 # https://www.youtube.com/watch?v=TburgnvAPLE
 # todo andere py_pets zur Auswahl machen
 import random
@@ -30,10 +30,16 @@ def stats():
     else:
         print("Und ich bin schön satt!")
 
+def tod():
+    print("Ahhhhhhhhhhhhhhhhhhhhhhhhh")
+    print("Dein py_pet ist tot")
+    beenden = True
+
 
 start_pet()
 
 # todo: Wenn Gewicht größer 10 Pet stirbt aber "Trainieren" macht Gewicht Weniger
+# todo: zu viel training füht zum Tod
 
 while not beenden:
     print("###################################")
@@ -44,16 +50,26 @@ while not beenden:
         stats()
     elif user_input == "Füttern":
         py_pluesch["gewicht"] = py_pluesch["gewicht"] + 1
-        py_pluesch["hunger"] = False
-        print("NomNomNom! Das war lecker!")
-        print("Ich wiege jetzt " + str(py_pluesch["gewicht"]))
+        if py_pluesch["gewicht"] > 5:
+            tod()
+        else:
+            py_pluesch["hunger"] = False
+            print("NomNomNom! Das war lecker!")
+            print("Ich wiege jetzt " + str(py_pluesch["gewicht"]))
     elif user_input == "Hallo":
         print(random.choice(py_pluesch["sprueche"]))
     elif user_input == "Schau":
         print(str(py_pluesch["bild"]))
+    elif user_input == "Training":
+            if py_pluesch["gewicht"] < 1:
+                py_pluesch["gewicht"] = py_pluesch["gewicht"] - 1
+                print("Ufff, das war anstrengend!")
+                py_pluesch["hunger"] = True
+            else:
+                tod()
     else:
         # Hier immer alle möglichen User Inputs ergänzen
-        print("Wie bitte? Du kannst nur Status, Füttern, Hallo, Schau oder Ende nutzen!")
+        print("Wie bitte? Du kannst nur Status, Füttern, Hallo, Training, Schau oder Ende nutzen!")
 
 
 print("Bis zum nächsten Mal!")
