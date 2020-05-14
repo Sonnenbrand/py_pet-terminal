@@ -9,4 +9,4 @@ Those pets will be enhanced if possible in iterations and the usage of pygame.
 Pet will start. You can ask for stats, feed it, chat with it and end it.
 ## ToDo
 so much!
-Ask for weather by calling an API?
+- [ ] Ask for weather by calling an API?
